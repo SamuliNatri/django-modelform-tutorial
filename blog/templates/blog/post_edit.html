@@ -1,0 +1,7 @@
+<h1>Edit post</h1>
+<form action="{% url 'post_edit' post.pk %}"
+      method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button class="button" type="submit">Update</button>
+</form>
